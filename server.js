@@ -84,7 +84,7 @@ app.post('/api/paypal/authorize-order', async (req, res) => {
       });
       console.log(response, response.data)
       if (response.status === 201) {
-        res.json({ success: true, message: 'Order authorized successfully', data: response.data});
+        res.json({ success: true, message: 'Order authorized successfully!', data: response.data});
       } else {
         res.status(400).json({ success: false, message: 'Failed to authorize order' });
       }
